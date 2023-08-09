@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    position: relative;
+    background-color: #f2f2f2;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+}
+
+.logo {
+    height: 50px;
+}
+
+.search-container {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.welcome-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.icons-container {
+    display: flex;
+}
+
+.icon {
+    width: 30px;
+    margin-left: 10px;
+}
+
+/* Adjust the icon size and spacing as needed */
+.icon:first-child {
+    margin-left: 0;
+}
+
+/* Optional: Add some hover effects for the icons */
+.icon:hover {
+    opacity: 0.8;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 80px 0;
+}
+
+.leftcolumn {
+    flex: 75%;
+    max-width: 800px;
+}
+
+.rightcolumn {
+    flex: 25%;
+    max-width: 300px;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: calc(33.33% - 40px); /* To ensure cards are evenly spaced */
+    transition: transform 0.2s ease;
+}
+
+/* Hover effect on cards */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.card h5 {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.card div a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.card div img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+/* Hover effect on images */
+.card div img:hover {
+    transform: scale(1.05);
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+    color: #888;
+    font-size: 12px;
+}
+.search{
+width: 500px;
+display: flex;
+margin-left: 10%;
+margin-right: 10%; 
+}
+
+.search-box{
+width: 80%;
+height: 40px;
+padding: 10px 20px;
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;
+border: 1px solid #d1d1d1;
+text-transform: capitalize;
+background: none;
+color: black;
+outline: none;
+}
+.rating-container {
+  display: inline-block;
+  font-size: 24px;
+  cursor: pointer;
+    
+}
+.rating-container input {
+    display: none;
+}
+
+.rating-container label {
+    color: #ccc;
+    padding: 2px;
+}
+
+.rating-container label:before {
+    content:  '☆';
+}
+
+.rating-container input:checked ~ label {
+    color: gold;
+}

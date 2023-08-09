@@ -1,0 +1,118 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+   }
+   body, h1, h2, h3, p, img {
+   margin: 0;
+   padding: 0;
+   }
+       .logo {
+           height: 70px;
+       }
+       .search-container {
+          flex: 1;
+           margin: 0 20px;
+         }
+       .search-bar {
+           width: 100%;
+           padding: 8px;
+           font-size: 16px;
+           border: none;
+           border-radius: 5px;
+       }
+       .welcome-text {
+           font-size: 18px;
+           font-weight: bold;
+       }
+      .icons-container {
+           display: flex;
+       }
+       .icon {
+           width: 30px;
+           margin-left: 10px;
+       }
+       /* Adjust the icon size and spacing as needed */
+      .icon:first-child {
+            margin-left: 0;
+      }
+      /* Optional: Add some hover effects for the icons */
+       .icon:hover {
+           opacity: 0.8;
+        }
+      .container {
+           column-count: 4; /* Number of columns you want, adjust as needed */
+           column-gap: 20px; /* Set the gap between columns */
+           margin: 0 auto; /* Center the container */
+           max-width: 1200px; /* Set a maximum width for the container */
+       }
+
+         .image-container {
+            position: relative;
+            margin-bottom: 20px;
+            break-inside: avoid;
+            border-radius: 5px;
+            overflow: hidden;
+         }
+
+       .image-container img {
+         width: 100%; /* Set the image width to fit the container */
+         height: auto; /* Auto-adjust the height to maintain the aspect ratio */
+         transition: transform 0.2s ease; /* Optional hover effect */
+        }
+
+      /* Optional: Hover effect */
+      .image-container:hover img {
+         transform: scale(1.07);
+      }
+
+      @media (max-width: 1200px) {
+         .image-container {
+             width: calc(25% - 15px); /* 4 images per row with 20px gaps in between */
+         }
+      }
+
+      @media (max-width: 768px) {
+         .image-container {
+             width: calc(50% - 10px); /* 2 images per row with 10px gaps in between */
+         }
+      }
+
+      @media (max-width: 576px) {
+         .image-container {
+             width: calc(100% - 20px); /* 1 image per row with 20px gap on both sides */
+         }
+      }
+      .save-button {
+         position: absolute;
+         top: 5px;
+         left: 5px;
+         padding: 5px 10px;
+         background-color: #ff0000;
+         color: #fff;
+         border: none;
+         cursor: pointer;
+         border-radius: 5px;
+         z-index: 1;
+       }
+       .save-button.saved {
+          background-color: #28A745;
+      }
+     .like-button {
+         position: absolute;
+         bottom: 5px;
+         left: 5px;
+         padding: 5px 10px;
+         background-color: #007bff; /* Blue color */
+         color: #fff;
+         border: none;
+         cursor: pointer;
+         border-radius: 5px;
+         z-index: 2; /* Ensure the like button appears above the image */
+     }
+     .like-button.liked {
+         background-color: #fff; /* White color when liked */
+         color: #007bff; /* Blue text color when liked */
+     }

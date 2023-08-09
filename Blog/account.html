@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="account.css">
+</head>
+<body>
+    <header>
+        <img src="https://img.freepik.com/premium-vector/word-concept-color-geometric-shapes-blog_205544-12899.jpg" alt="Blog Logo" class="logo">
+        <div class="search">
+          <input type="text" class="search-box" placeholder="Search blogs..." oninput="searchBlogs()">
+          <button class="search-btn">Search</button>
+        </div>
+        <!-- <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search..."> -->
+        </div>
+        <div class="welcome-text">Create and Explore New Blogs</div>
+        <div class="icons-container">
+            <a href="saved.html"><img src="https://pixlok.com/wp-content/uploads/2021/10/Save-Icon-SVG-098uygv.png" alt="Saved" class="icon"></a>
+            <a href="notifi.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU-x7-gAG7sshiHhTTZfWcOrYg4wDBx2iUTR3s-gocV1zfpPaGZeNR5nal9G5xzcJLEUU&usqp=CAU" alt="Notification" class="icon"></a>
+            <a href="account.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBRkqfdlgNm8JANan6POf3plRhVIj-1PCSdA&usqp=CAU" alt="Account" class="icon"></a>
+        </div>
+    </header>
+    <div id="account-info" class="account-info">
+    
+    </div>
+    
+    <footer>
+        <!-- Rating System -->
+        <h3>Rate Us</h3>
+        <div class="rating-container">
+          <input type="radio" name="rating" id="star5" value="5">
+          <label for="star5"></label>
+          <input type="radio" name="rating" id="star4" value="4">
+          <label for="star4"></label>
+          <input type="radio" name="rating" id="star3" value="3">
+          <label for="star3"></label>
+          <input type="radio" name="rating" id="star2" value="2">
+          <label for="star2"></label>
+          <input type="radio" name="rating" id="star1" value="1">
+          <label for="star1"></label>
+      </div>
+        <br>
+        <button onclick="submitRating()">Submit Rating</button>
+    
+        <!-- Contact Us for Queries -->
+        <h3>Contact Us</h3>
+        <p>If you have any queries, feel free to contact us:</p>
+        <p>Email: ourblog@gmail.com</p>
+        <p>Phone: +1 6789283023</p>
+        <!-- End of Contact Us Section -->
+    </footer>
+    <script src="account.js"></script>
+
+</body>
+</html>

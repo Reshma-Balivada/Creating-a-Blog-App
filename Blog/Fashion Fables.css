@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    position: relative;
+    background-color: #f2f2f2;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+}
+
+.logo {
+    height: 50px;
+}
+
+.search-container {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.welcome-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.icons-container {
+    display: flex;
+}
+
+.icon {
+    width: 30px;
+    margin-left: 10px;
+}
+
+/* Adjust the icon size and spacing as needed */
+.icon:first-child {
+    margin-left: 0;
+}
+
+/* Optional: Add some hover effects for the icons */
+.icon:hover {
+    opacity: 0.8;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Styles for the individual cards */
+.card {
+/* background-color: rgb(251, 206, 255); */
+background-image: url('https://i.pinimg.com/474x/28/bf/1d/28bf1dd6d283b7e9bf4446835525af16.jpg');
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+padding: 20px;
+margin: 20px;
+width: calc(33.33% - 40px); /* To ensure cards are evenly spaced */
+transition: transform 0.2s ease;
+}
+
+
+/* Hover effect on cards */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.card h5 {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.card p {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+    color: #888;
+    font-size: 12px;
+}

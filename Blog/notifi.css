@@ -1,0 +1,26 @@
+/* <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> */
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+.notification {
+    position: relative;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.notification .close-btn {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.notification .close-btn:hover {
+    color: #721c24;
+}
