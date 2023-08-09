@@ -1,0 +1,308 @@
+\<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tech Blog</title>
+  <style>
+    header {
+             display: flex;
+             align-items: center;
+             justify-content: space-between;
+             padding: 10px;
+             background-color: white;
+          }
+          body, h1, h2, h3, p, img {
+             margin: 0;
+              padding: 0;
+          }
+          .logo {
+              height: 70px;
+          }
+          .search-container {
+             flex: 1;
+              margin: 0 20px;
+            }
+          .search-bar {
+              width: 100%;
+              padding: 8px;
+              font-size: 16px;
+              border: none;
+              border-radius: 5px;
+          }
+          .welcome-text {
+              font-size: 18px;
+              font-weight: bold;
+          }
+         .icons-container {
+              display: flex;
+          }
+          .icon {
+              width: 30px;
+              margin-left: 10px;
+          }
+          /* Adjust the icon size and spacing as needed */
+         .icon:first-child {
+               margin-left: 0;
+         }
+         /* Optional: Add some hover effects for the icons */
+          .icon:hover {
+              opacity: 0.8;
+           }
+         .container {
+              column-count: 4; /* Number of columns you want, adjust as needed */
+              column-gap: 20px; /* Set the gap between columns */
+              margin: 0 auto; /* Center the container */
+              max-width: 1200px; /* Set a maximum width for the container */
+          }
+
+            .image-container {
+               position: relative;
+               margin-bottom: 20px;
+               break-inside: avoid;
+               border-radius: 5px;
+               overflow: hidden;
+            }
+
+          .image-container img {
+            width: 100%; /* Set the image width to fit the container */
+            height: auto; /* Auto-adjust the height to maintain the aspect ratio */
+            transition: transform 0.2s ease; /* Optional hover effect */
+           }
+
+         /* Optional: Hover effect */
+         .image-container:hover img {
+            transform: scale(1.07);
+         }
+
+         @media (max-width: 1200px) {
+            .image-container {
+                width: calc(25% - 15px); /* 4 images per row with 20px gaps in between */
+            }
+         }
+
+         @media (max-width: 768px) {
+            .image-container {
+                width: calc(50% - 10px); /* 2 images per row with 10px gaps in between */
+            }
+         }
+
+         @media (max-width: 576px) {
+            .image-container {
+                width: calc(100% - 20px); /* 1 image per row with 20px gap on both sides */
+            }
+         }
+         .save-button {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            padding: 5px 10px;
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            z-index: 1;
+          }
+          .save-button.saved {
+             background-color: #28A745;
+         }
+        .like-button {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            padding: 5px 10px;
+            background-color: #007bff; /* Blue color */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            z-index: 2; /* Ensure the like button appears above the image */
+        }
+        .like-button.liked {
+            background-color: #fff; /* White color when liked */
+            color: #007bff; /* Blue text color when liked */
+        }
+
+  </style>
+</head>
+<body>
+    <header>
+        <img src="https://img.freepik.com/premium-vector/word-concept-color-geometric-shapes-blog_205544-12899.jpg" alt="Blog Logo" class="logo">
+        <div class="search-container">
+          <input type="text" class="search-bar" placeholder="Search...">
+        </div>
+        <div class="welcome-text">Strive for progress not perfection</div>
+        <div class="icons-container">
+          <a href="saved.html"><img src="https://pixlok.com/wp-content/uploads/2021/10/Save-Icon-SVG-098uygv.png" alt="Saved" class="icon"></a>
+          <a href="notifi.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU-x7-gAG7sshiHhTTZfWcOrYg4wDBx2iUTR3s-gocV1zfpPaGZeNR5nal9G5xzcJLEUU&usqp=CAU" alt="Notification" class="icon"></a>
+          <a href="account.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBRkqfdlgNm8JANan6POf3plRhVIj-1PCSdA&usqp=CAU" alt="Account" class="icon"></a>
+        </div>
+    </header>
+
+  <div class="container">   
+    <!-- Image containers with fixed height -->
+    <div class="image-container">
+      <img id="myImage" src="https://i.pinimg.com/474x/c5/d8/6a/c5d86a3aa320bba2fb2aa90edfe1a181.jpg" alt="Image 1">
+      <button class="save-button" onclick="saveImage(this)">Save</button>
+      <button class="like-button" onclick="likeImage(this)">Like</button>
+       
+    </div>
+    <div class="image-container">
+        <img src="https://i.pinimg.com/474x/8d/37/99/8d3799e24be55bdfddb7a4fd8e4100d0.jpg" alt="Image 2">
+        <button class="save-button" onclick="saveImage(this)">Save</button>
+        <button class="like-button" onclick="likeImage(this)">Like</button>
+    </div>
+      <br>
+    <div class="image-container">
+        <img src="https://i.pinimg.com/474x/0f/42/33/0f4233339a372ea0cbca66af045cbb7c.jpg" alt="Image 3">
+        <button class="save-button" onclick="saveImage(this)">Save</button>
+        <button class="like-button" onclick="likeImage(this)">Like</button>
+    </div>
+      <br>
+    <div class="image-container">
+        <img src="https://i.pinimg.com/474x/41/7d/4a/417d4a671bbfdf8649505214bd2b209a.jpg" alt="Image 4">
+        <button class="save-button" onclick="saveImage(this)">Save</button>
+        <button class="like-button" onclick="likeImage(this)">Like</button>
+    </div>
+      <br>
+    <div class="image-container">
+        <img src="https://i.pinimg.com/474x/50/44/1b/50441bd1dc10f6d6ba0789b42f4dfeb4.jpg" alt="Image 5">
+        <button class="save-button" onclick="saveImage(this)">Save</button>
+        <button class="like-button" onclick="likeImage(this)">Like</button>
+    </div>
+      <br>
+    <div class="image-container">
+          <img src="https://i.pinimg.com/474x/5e/eb/c0/5eebc09ee8dd8259d2b8101f0d34c34c.jpg" alt="Image 6">
+          <button class="save-button" onclick="saveImage(this)">Save</button>
+          <button class="like-button" onclick="likeImage(this)">Like</button>
+    </div>
+      <br>
+    <div class="image-container">
+          <img src="https://i.pinimg.com/474x/3b/4c/41/3b4c41b14d5de925305457608a728d51.jpg" alt="Image 7">
+          <button class="save-button" onclick="saveImage(this)">Save</button>
+          <button class="like-button" onclick="likeImage(this)">Like</button>
+    </div>
+      <br>
+    <div class="image-container">
+          <img src="https://i.pinimg.com/474x/2a/da/a7/2adaa701e1b47ec40089f134e86ca510.jpg" alt="Image 8">
+          <button class="save-button" onclick="saveImage(this)">Save</button>
+          <button class="like-button" onclick="likeImage(this)">Like</button>
+    </div>
+      <br>
+    <div class="image-container">
+          <img src="https://i.pinimg.com/474x/c9/2f/f3/c92ff3dd6838b5272cfce6d20a46b2dd.jpg" alt="Image 9">
+          <button class="save-button" onclick="saveImage(this)">Save</button>
+          <button class="like-button" onclick="likeImage(this)">Like</button>
+    </div>
+      <br>
+    <div class="image-container">
+          <img src="https://i.pinimg.com/474x/c8/19/8c/c8198cf58cc0d06ddb059026c9c447b2.jpg" alt="Image 10">
+          <button class="save-button" onclick="saveImage(this)">Save</button>
+          <button class="like-button" onclick="likeImage(this)">Like</button>
+    </div>
+      <br>
+    <div class="image-container">
+          <img src="https://i.pinimg.com/474x/fd/22/27/fd22270b02ab43eaffc61b72e3dd4010.jpg" alt="Image 11">
+          <button class="save-button" onclick="saveImage(this)">Save</button>
+          <button class="like-button" onclick="likeImage(this)">Like</button>
+    </div>
+      <br>
+    <div class="image-container">
+          <img src="https://i.pinimg.com/474x/6c/33/e4/6c33e4958b81624198a12348b5172982.jpg" alt="Image 12">
+          <button class="save-button" onclick="saveImage(this)">Save</button>
+          <button class="like-button" onclick="likeImage(this)">Like</button>
+    </div>
+      <br>
+    <div class="image-container">
+          <img src="https://i.pinimg.com/474x/37/1b/01/371b016383da1286b7a00aff0324e1e9.jpg" alt="Image 13">
+          <button class="save-button" onclick="saveImage(this)">Save</button>
+          <button class="like-button" onclick="likeImage(this)">Like</button>
+    </div>
+      <br>
+    <div class="image-container">
+          <img src="https://i.pinimg.com/474x/43/37/0f/43370f6d8473c1897d9d61b594c6b3c3.jpg" alt="Image 14">
+          <button class="save-button" onclick="saveImage(this)">Save</button>
+          <button class="like-button" onclick="likeImage(this)">Like</button>
+    </div>
+      <br>
+    <div class="image-container">
+          <img src="https://i.pinimg.com/474x/85/6c/f8/856cf8ce8061d2dc6d6ac95dbce2b193.jpg" alt="Image 15">
+          <button class="save-button" onclick="saveImage(this)">Save</button>
+          <button class="like-button" onclick="likeImage(this)">Like</button>
+    </div>
+      <br>
+    <div class="image-container">
+          <img src="https://i.pinimg.com/474x/a8/0c/c3/a80cc3a0a3acd9e4db805fb13bbb1524.jpg" alt="Image 16">
+          <button class="save-button" onclick="saveImage(this)">Save</button>
+          <button class="like-button" onclick="likeImage(this)">Like</button>
+    </div>
+      <br>
+    <div class="image-container">
+          <img src="https://i.pinimg.com/474x/d4/35/6a/d4356a28b8bea126d6a0815dd6297b2f.jpg" alt="Image 17">
+          <button class="save-button" onclick="saveImage(this)">Save</button>
+          <button class="like-button" onclick="likeImage(this)">Like</button>
+    </div>
+      <br>
+    <div class="image-container">
+          <img src="https://i.pinimg.com/474x/03/a3/fb/03a3fb63a1f1c0a86085d38b9ebc9214.jpg" alt="Image 18">
+          <button class="save-button" onclick="saveImage(this)">Save</button>
+          <button class="like-button" onclick="likeImage(this)">Like</button>
+    </div>
+      <br>
+    <div class="image-container">
+          <img src="https://i.pinimg.com/474x/27/04/15/270415a3b815d93b533cd12291149089.jpg" alt="Image 19">
+          <button class="save-button" onclick="saveImage(this)">Save</button>
+          <button class="like-button" onclick="likeImage(this)">Like</button>
+    </div>
+      <br>
+    <div class="image-container">
+          <img src="https://i.pinimg.com/474x/03/2b/b4/032bb4387d0796e02d7e23ac92adea99.jpg" alt="Image 20">
+          <button class="save-button" onclick="saveImage(this)">Save</button>
+          <button class="like-button" onclick="likeImage(this)">Like</button>
+    </div>
+      <br>
+      <br>
+      <!-- Add more image containers here -->
+    </div>
+    <script>
+      // Function to handle the click event of the "Save" button
+      function saveImage(button) {
+          const productContainer = button.parentNode;
+          const image = productContainer.querySelector('img');
+          const imageUrl = image.getAttribute('src');
+          // Check if the image is already saved
+          const isSaved = button.classList.contains('saved');
+
+          if (!isSaved) {
+              // Add the image URL to saved_images in localStorage
+              const savedImages = getSavedImages();
+              savedImages.push(imageUrl); 
+              localStorage.setItem('saved_images', JSON.stringify(savedImages));
+
+            // Change the button text to "Saved"
+            button.innerText = 'Saved';
+            button.classList.add('saved');
+          }
+      }
+           // Function to retrieve saved image URLs from localStorage
+      function getSavedImages() {
+          const savedImagesJSON = localStorage.getItem('saved_images');
+          return savedImagesJSON ? JSON.parse(savedImagesJSON) : [];
+      }
+      function likeImage(button) {
+          const isLiked = button.classList.contains('liked');
+
+          if (isLiked) {
+              button.innerText = 'Like';
+              button.classList.remove('liked');
+          } else {
+              button.innerText = 'Liked';
+              button.classList.add('liked');
+          }
+      }
+  </script>
+
+</body>
+</html>

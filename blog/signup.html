@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .signup-form {
+            max-width: 400px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .signup-form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .signup-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .signup-form button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .signup-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .signup-form p {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        /* Style for the "Already have an account" link */
+        .signup-form a {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+
+        .signup-form a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="homepage.html">
+            <div class="signup-form">
+                <h1 class="signup-title">Sign Up</h1>
+                <input class="signup-input" type="text" name="First Name" placeholder="Enter Your First Name" required>
+                <input class="signup-input" type="text" name="Last Name" placeholder="Enter Your Last Name" required>
+                <input class="signup-input" type="password" name="New Password" placeholder="Enter New Password" required>
+                <input class="signup-input" type="password" name="Re-enter New Password" placeholder="Re-enter New Password" required>
+                <button class="signup-button" type="submit">Sign Up</button>
+                <br>
+                <br>
+                <br>
+                <div>
+                    <a href="coverpage.html">Already have an account</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
